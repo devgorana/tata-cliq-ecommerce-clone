@@ -599,27 +599,27 @@ Touch targets:
 
 Use this to track component build status:
 
-- [ ] CSS variables & design tokens set up
-- [ ] Google Fonts imported (Playfair Display + DM Sans)
-- [ ] Announcement bar
-- [ ] Navigation (desktop mega-menu + mobile drawer)
-- [ ] Hero carousel with auto-slide
-- [ ] Category shortcut strip
-- [ ] Section header component
-- [ ] Product card (with wishlist, badges, hover states)
-- [ ] Product grid (4/3/2 col responsive)
-- [ ] Promotional banners (2-up & 3-up)
+- [x] CSS variables & design tokens set up
+- [x] Google Fonts imported (Playfair Display + DM Sans)
+- [x] Announcement bar
+- [x] Navigation (desktop mega-menu + mobile drawer)
+- [x] Hero carousel with auto-slide
+- [x] Category shortcut strip
+- [x] Section header component
+- [x] Product card (with wishlist, badges, hover states)
+- [x] Product grid (4/3/2 col responsive)
+- [x] Promotional banners (2-up & 3-up)
 - [ ] Brand logo strip
-- [ ] Footer (4-column + bottom bar)
-- [ ] PLP (filters + sort + grid)
-- [ ] PDP (image gallery + info panel + trust badges)
+- [x] Footer (4-column + bottom bar)
+- [x] PLP (filters + sort + grid)
+- [x] PDP (image gallery + info panel + trust badges)
 - [ ] Cart drawer / page
 - [ ] Wishlist page
 - [ ] Toast / snackbar notifications
-- [ ] Skeleton loaders
+- [x] Skeleton loaders
 - [ ] Responsive behavior at all 3 breakpoints
 - [ ] Accessibility audit (contrast, keyboard, ARIA)
-- [ ] Performance (lazy images, font loading)
+- [x] Performance (lazy images, font loading)
 
 ---
 

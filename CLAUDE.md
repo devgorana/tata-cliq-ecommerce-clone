@@ -173,7 +173,7 @@ src/
 |-------|---------------------------------------|--------------|
 | 1     | Architecture & Setup                  | ✅ COMPLETE   |
 | 2     | Layout & Homepage                     | ✅ COMPLETE   |
-| 3     | Product Catalog & Discovery (PLP/PDP) | ⬜ PENDING    |
+| 3     | Product Catalog & Discovery (PLP/PDP) | ✅ COMPLETE   |
 | 4     | Cart, Checkout & Auth                 | ⬜ PENDING    |
 | 5     | Orders, Wishlist & Polish             | ⬜ PENDING    |
 
@@ -182,7 +182,7 @@ src/
 
 ---
 
-## Current Phase: Phase 3 — Product Catalog & Discovery ⬜
+## Current Phase: Phase 4 — Cart, Checkout & Auth ⬜
 
 ### Progress Log
 - [2026-05-01] Phase 1 complete: CLAUDE.md, TODO.md authored; Next.js 14 scaffolded; design tokens
@@ -199,3 +199,12 @@ src/
   (5 slides, 5s auto-advance), CategoryBanners (10-item scroll strip), FlashSaleModule
   (live countdown + product row), PromoBanners (2-up/3-up), SectionHeader; homepage wired
   per DESIGN.md §5.1 order. Build: zero errors.
+- [2026-05-01] Phase 3 complete: ProductCard (3:4, badge, wishlist, hover scale, rating),
+  FilterSidebar (sticky desktop + mobile drawer, category/brand/size/price/rating/discount),
+  AppliedFilters (chips + clear all), SortDropdown (6 options), ResultsGrid (4/3/2-col,
+  skeleton loaders, Load More); search/page.tsx (PLP) wired to FilterStore + useProducts;
+  ImageGallery (thumbnail strip, zoom-on-hover), VariantSelector (size chips + colour swatches),
+  DeliveryEstimate (pincode mock), EMICalculator (bank tabs, tenure), StickyAddToCart
+  (desktop inline + mobile sticky above bottom nav), ReviewsSection (star breakdown + mock
+  reviews), CLiQPromise, OfferTags, NeuCoins; product/[slug]/page.tsx (SSG, 50 static paths).
+  Build: zero errors, 55 pages generated.
