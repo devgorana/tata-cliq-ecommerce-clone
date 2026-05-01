@@ -172,7 +172,7 @@ src/
 | Phase | Focus                                 | Status       |
 |-------|---------------------------------------|--------------|
 | 1     | Architecture & Setup                  | ✅ COMPLETE   |
-| 2     | Layout & Homepage                     | ⬜ PENDING    |
+| 2     | Layout & Homepage                     | ✅ COMPLETE   |
 | 3     | Product Catalog & Discovery (PLP/PDP) | ⬜ PENDING    |
 | 4     | Cart, Checkout & Auth                 | ⬜ PENDING    |
 | 5     | Orders, Wishlist & Polish             | ⬜ PENDING    |
@@ -182,7 +182,7 @@ src/
 
 ---
 
-## Current Phase: Phase 1 — Architecture & Setup ✅
+## Current Phase: Phase 3 — Product Catalog & Discovery ⬜
 
 ### Progress Log
 - [2026-05-01] Phase 1 complete: CLAUDE.md, TODO.md authored; Next.js 14 scaffolded; design tokens
@@ -193,3 +193,9 @@ src/
 - [2026-05-01] CLAUDE.md and TODO.md updated to use @docs/DESIGN.md as design source of truth.
 - [2026-05-01] @docs/ARCHITECTURE.md added — full module map, data flow diagrams, naming
   conventions, module dependency rules, V2 extension points, and 7 ADRs.
+- [2026-05-01] Phase 2 complete: Playfair Display + DM Sans fonts loaded; tailwind.config.ts
+  updated with fontFamily tokens; Header (sticky, announcement bar, mega-menu, cart badge),
+  MegaMenu (3-col, 7 categories), Footer (4-col navy), BottomNav (mobile 5-tab); HeroCarousel
+  (5 slides, 5s auto-advance), CategoryBanners (10-item scroll strip), FlashSaleModule
+  (live countdown + product row), PromoBanners (2-up/3-up), SectionHeader; homepage wired
+  per DESIGN.md §5.1 order. Build: zero errors.

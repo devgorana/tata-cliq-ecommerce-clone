@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        display: ["var(--font-display)", "Georgia", "serif"],
+        body: ["var(--font-body)", "-apple-system", "sans-serif"],
+      },
       colors: {
         "primary-navy": "#1A1A6B",
         "accent-red": "#E4002B",

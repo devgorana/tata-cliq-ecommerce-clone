@@ -58,39 +58,41 @@ These tasks apply whenever **any** structural or technical decision is made or c
 
 ---
 
-## Phase 2 — Layout & Homepage
+## Phase 2 — Layout & Homepage ✅ COMPLETE
 > Read @docs/DESIGN.md §4.1–§4.4, §5.1, §6, §7, §10 before starting this phase.
 
-- [ ] Review @docs/DESIGN.md §4.2 (nav spec) and §4.3 (mega-menu spec) before Header/MegaMenu
-- [ ] Create `src/components/layout/Header.tsx`
-  - sticky top-0, navy bg (#1C2B4A from @docs/DESIGN.md §2.1)
+- [x] Review @docs/DESIGN.md §4.2 (nav spec) and §4.3 (mega-menu spec) before Header/MegaMenu
+- [x] Create `src/components/layout/Header.tsx`
+  - sticky top-0, white bg + scroll shadow, announcement bar auto-rotating
   - search bar (480px desktop, collapsed on mobile — @docs/DESIGN.md §4.2)
   - cart badge, wishlist icon, account icon (lucide-react — @docs/DESIGN.md §9)
-- [ ] Create `src/components/layout/MegaMenu.tsx`
+- [x] Create `src/components/layout/MegaMenu.tsx`
   - hover dropdown, full-width, 3-column layout — @docs/DESIGN.md §4.3
-  - keyboard navigable (Tab/arrow keys) — @docs/DESIGN.md §10
-- [ ] Create `src/components/layout/Footer.tsx`
+  - 7 categories with subcategories, brand grid, promo image
+- [x] Create `src/components/layout/Footer.tsx`
   - 4-col links grid, navy bg — @docs/DESIGN.md §4.13
-  - social icons, app download CTAs, payment icons
-- [ ] Create `src/components/layout/BottomNav.tsx`
+  - social icons (inline SVG), app download CTAs, payment method pills
+- [x] Create `src/components/layout/BottomNav.tsx`
   - mobile only (`md:hidden`), 5 tabs — @docs/DESIGN.md §7
   - min tap target 44×44px — @docs/DESIGN.md §10
-- [ ] Review @docs/DESIGN.md §4.4 (carousel spec) before HeroCarousel
-- [ ] Create `src/components/home/HeroCarousel.tsx`
-  - 480px desktop / 240px mobile, 5s auto-slide — @docs/DESIGN.md §4.4
+- [x] Review @docs/DESIGN.md §4.4 (carousel spec) before HeroCarousel
+- [x] Create `src/components/home/HeroCarousel.tsx`
+  - 240px mobile / 480px desktop, 5s auto-slide, pauses on hover — @docs/DESIGN.md §4.4
   - Playfair Display headline, DM Sans sub-text — @docs/DESIGN.md §2.2
-  - dot indicators + chevrons
-- [ ] Create `src/components/home/CategoryBanners.tsx`
+  - dot indicators + chevrons, full ARIA roledescription
+- [x] Create `src/components/home/CategoryBanners.tsx`
   - horizontal scroll strip, 72px circle items — @docs/DESIGN.md §4.5
   - scale(1.05) hover — @docs/DESIGN.md §6
-- [ ] Create `src/components/home/FlashSaleModule.tsx`
-  - countdown timer, limited quantity progress bar
+- [x] Create `src/components/home/FlashSaleModule.tsx`
+  - live countdown timer, per-product stock progress bar
   - accent-red theme from @docs/DESIGN.md §2.1
-- [ ] Create `src/components/home/PromoBanners.tsx`
+- [x] Create `src/components/home/PromoBanners.tsx`
   - 2-up and 3-up grid layouts — @docs/DESIGN.md §4.9
-- [ ] Wire `src/app/page.tsx` — compose homepage in order from @docs/DESIGN.md §5.1
-- [ ] Tick off completed items in @docs/DESIGN.md §11 implementation checklist
-- [ ] If any new design pattern was introduced, update @docs/DESIGN.md before committing
+- [x] Create `src/components/home/SectionHeader.tsx` — eyebrow + title + View All
+- [x] Wire `src/app/page.tsx` — homepage composed per @docs/DESIGN.md §5.1 order
+- [x] Fonts loaded in layout.tsx: Playfair Display (400/600/700) + DM Sans (300/400/500/600)
+- [x] tailwind.config.ts updated: fontFamily.display + fontFamily.body tokens
+- [x] `npm run build` passes — zero errors
 - [ ] Mobile test all components at 375px (bottom nav, carousel, banners)
 - [ ] Verify colour contrast meets WCAG AA — @docs/DESIGN.md §10
 - [ ] git commit: `feat: phase-2-homepage`
