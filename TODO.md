@@ -19,6 +19,19 @@ They are not phase-specific — they are permanent project habits.
 - [ ] @docs/DESIGN.md must be updated **before** the related code change is committed
 - [ ] Implementation checklist in @docs/DESIGN.md §11 must be ticked off as components are built
 
+## ⚠ Architecture Maintenance — Standing Rules (apply to every phase)
+
+These tasks apply whenever **any** structural or technical decision is made or changed.
+
+- [ ] Before adding a new module or folder → check @docs/ARCHITECTURE.md §4 to confirm it fits the module map
+- [ ] When a new hook is created → verify it follows the data-flow rules in @docs/ARCHITECTURE.md §7
+- [ ] When a new Zustand store is introduced → add it to @docs/ARCHITECTURE.md §6 store diagram
+- [ ] When a new page route is added → add it to the routing table in @docs/ARCHITECTURE.md §8
+- [ ] When a module's import dependencies change → verify no rules in @docs/ARCHITECTURE.md §11 are broken
+- [ ] When a significant technical decision is made → add an ADR entry to @docs/ARCHITECTURE.md §13
+- [ ] When a V2 extension point is used or changed → update @docs/ARCHITECTURE.md §12
+- [ ] @docs/ARCHITECTURE.md must be updated in the same commit as the structural change
+
 ---
 
 ## Phase 1 — Architecture & Setup
@@ -162,6 +175,7 @@ They are not phase-specific — they are permanent project habits.
 
 ## Phase 5 — Orders, Wishlist & Polish
 > Read @docs/DESIGN.md §6 (motion), §7 (responsive), §10 (a11y) for the final audit.
+> Read @docs/ARCHITECTURE.md §6 (state) and §11 (module boundaries) before adding any new hooks or stores.
 
 - [ ] Create `src/hooks/useOrders.ts` (mock order history)
 - [ ] Create `src/app/orders/page.tsx` (order list + status badges using @docs/DESIGN.md colours)
@@ -177,6 +191,7 @@ They are not phase-specific — they are permanent project habits.
 - [ ] `next/image` LQIP on all product images — fade-in on intersection per @docs/DESIGN.md §6
 - [ ] Verify all @docs/DESIGN.md §11 implementation checklist items are ticked
 - [ ] Final review: confirm @docs/DESIGN.md reflects the as-built design (no drift)
+- [ ] Final review: confirm @docs/ARCHITECTURE.md ADR log and module map reflect the as-built structure
 - [ ] `vercel.json` + final `npm run build` with zero errors
 - [ ] git commit: `feat: phase-5-polish`
 - [ ] git commit: `feat: phase-5-vercel-deploy`
@@ -194,7 +209,17 @@ They are not phase-specific — they are permanent project habits.
 ## Design Change Log
 _Record every change to @docs/DESIGN.md here with a date and reason._
 
-| Date       | Section changed         | What changed                             | Reason |
-|------------|-------------------------|------------------------------------------|--------|
-| 2026-05-01 | Created @docs/DESIGN.md | Full brand spec added                    | Phase 0b design system authoring |
+| Date       | Section changed         | What changed                                 | Reason |
+|------------|-------------------------|----------------------------------------------|--------|
+| 2026-05-01 | Created @docs/DESIGN.md | Full brand spec added                        | Phase 0b design system authoring |
 | 2026-05-01 | CLAUDE.md + TODO.md     | All design refs now point to @docs/DESIGN.md | Single source of truth rule |
+
+---
+
+## Architecture Change Log
+_Record every change to @docs/ARCHITECTURE.md here with a date and reason._
+
+| Date       | Section changed              | What changed                                         | Reason |
+|------------|------------------------------|------------------------------------------------------|--------|
+| 2026-05-01 | Created @docs/ARCHITECTURE.md | Full module map, data flow, naming conventions, module boundary rules, V2 extension points, ADR-001 through ADR-007 | Phase 1 architecture documentation |
+| 2026-05-01 | CLAUDE.md + TODO.md          | References to @docs/ARCHITECTURE.md added            | Architecture as living document |

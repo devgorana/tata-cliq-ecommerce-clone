@@ -124,6 +124,9 @@ Load both via `next/font/google` in `src/app/layout.tsx`.
 - Every component must match its spec in @docs/DESIGN.md §4 before being considered done
 - Append `"do not modify anything else"` to every generation prompt
 - **If a design decision is not in @docs/DESIGN.md, add it there before coding it**
+- **If a new module, hook, or data flow is introduced, update @docs/ARCHITECTURE.md ADR log**
+- Module dependency rules in @docs/ARCHITECTURE.md §11 must not be violated (no circular imports)
+- V2 extension points are pre-defined in @docs/ARCHITECTURE.md §12 — follow them, do not improvise
 
 ---
 
@@ -131,6 +134,7 @@ Load both via `next/font/google` in `src/app/layout.tsx`.
 ```
 docs/
   DESIGN.md               ← @docs/DESIGN.md — THE design source of truth
+  ARCHITECTURE.md         ← @docs/ARCHITECTURE.md — module map, data flow, decision log
 src/
   types/index.ts          ← Product, Order, FilterState, CartItem…
   data/mock-catalog.ts    ← 50 typed products (Fashion/Electronics/Luxury/Home)
@@ -187,3 +191,5 @@ src/
 - [2026-05-01] @docs/DESIGN.md added (brand colours, Playfair Display + DM Sans typography,
   component specs, motion rules, responsive behaviour, accessibility guidelines).
 - [2026-05-01] CLAUDE.md and TODO.md updated to use @docs/DESIGN.md as design source of truth.
+- [2026-05-01] @docs/ARCHITECTURE.md added — full module map, data flow diagrams, naming
+  conventions, module dependency rules, V2 extension points, and 7 ADRs.
