@@ -5,6 +5,10 @@ _Read this file at the start of every Claude Code session._
 Multi-category retail marketplace clone of Tata CLiQ (Fashion, Electronics, Luxury, Home).
 Next.js 14 App Router · React 18 · TypeScript 5 · Tailwind CSS 3 · shadcn/ui · Zustand · TanStack Query.
 
+**Design spec**: See [docs/DESIGN.md](docs/DESIGN.md) — brand colours, typography (Playfair Display + DM Sans),
+component specs, motion rules, responsive breakpoints, and accessibility guidelines.
+All UI components must follow docs/DESIGN.md before being built.
+
 ---
 
 ## Approved Stack
