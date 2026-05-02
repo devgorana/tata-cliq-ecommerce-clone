@@ -27,7 +27,7 @@
 
   /* Secondary */
   --cliq-navy:       #1C2B4A;   /* Nav bar background, footer */
-  --cliq-gold:       #C9A84C;   /* Luxury accents, CLiQ Luxury sub-brand */
+  --cliq-gold:       #C9A84C;   /* Luxury accents, CLiQ Luxury sub-brand, NeuCoins */
   --cliq-light-gray: #F5F5F5;   /* Page background, section fills */
   --cliq-mid-gray:   #9E9E9E;   /* Secondary text, placeholders, borders */
   --cliq-border:     #E0E0E0;   /* Dividers, card outlines */
@@ -614,10 +614,10 @@ Use this to track component build status:
 - [x] PLP (filters + sort + grid)
 - [x] PDP (image gallery + info panel + trust badges)
 - [x] Cart drawer / page
-- [ ] Wishlist page
+- [x] Wishlist page
 - [x] Toast / snackbar notifications
 - [x] Skeleton loaders
-- [ ] Responsive behavior at all 3 breakpoints
+- [x] Responsive behavior at all 3 breakpoints
 - [ ] Accessibility audit (contrast, keyboard, ARIA)
 - [x] Performance (lazy images, font loading)
 

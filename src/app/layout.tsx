@@ -5,6 +5,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import BottomNav from "@/components/layout/BottomNav";
 import { ToastProvider } from "@/components/ui/Toast";
+import BackToTop from "@/components/ui/BackToTop";
 
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
@@ -39,6 +40,7 @@ export default function RootLayout({
           <main>{children}</main>
           <Footer />
           <BottomNav />
+          <BackToTop />
         </ToastProvider>
       </body>
     </html>

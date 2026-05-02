@@ -698,6 +698,5 @@ Relative paths (`../../`) are forbidden.
 
 ---
 
-_End of ARCHITECTURE.md_
-_Last updated: 2026-05-01 — Phase 1 complete._
-_Next update due: Phase 2 completion (add component hierarchy diagram and layout module notes)._
+_Last updated: 2026-05-02 — Phase 5 complete._
+_Next update due: V2 backend integration (add API service layer, TanStack Query wiring)._

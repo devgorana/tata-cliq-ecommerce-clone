@@ -15,6 +15,8 @@ interface ProductCardProps {
 
 export default function ProductCard({ product }: ProductCardProps) {
   const [isHovered, setIsHovered] = useState(false);
+  // Pop animation state — scale 1→1.3→1 on toggle per @docs/DESIGN.md §6
+  const [heartPop, setHeartPop] = useState(false);
   const { user, toggleWishlist } = useAuthStore();
   const { addItem } = useCartStore();
 
@@ -26,6 +28,9 @@ export default function ProductCard({ product }: ProductCardProps) {
     e.preventDefault();
     e.stopPropagation();
     toggleWishlist(product.id);
+    // Trigger pop animation
+    setHeartPop(true);
+    setTimeout(() => setHeartPop(false), 300);
   };
 
   const handleQuickAdd = (e: React.MouseEvent) => {
@@ -52,6 +57,8 @@ export default function ProductCard({ product }: ProductCardProps) {
               "object-cover transition-transform duration-300",
               isHovered && "scale-[1.03]"
             )}
+            placeholder="blur"
+            blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjRjVGNUY1Ii8+PC9zdmc+"
           />
 
           {/* Badge top-left */}
@@ -65,7 +72,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             </span>
           )}
 
-          {/* Wishlist heart top-right */}
+          {/* Wishlist heart top-right — pop+fill animation per @docs/DESIGN.md §6 */}
           <button
             onClick={handleWishlist}
             aria-label={isWishlisted ? "Remove from wishlist" : "Add to wishlist"}
@@ -78,7 +85,9 @@ export default function ProductCard({ product }: ProductCardProps) {
             <Heart
               size={16}
               className={cn(
-                "transition-colors duration-200",
+                // Pop: scale 1→1.3→1 in 300ms per @docs/DESIGN.md §6
+                "transition-all duration-300",
+                heartPop ? "scale-[1.3]" : "scale-100",
                 isWishlisted ? "fill-accent-red text-accent-red" : "text-muted"
               )}
             />

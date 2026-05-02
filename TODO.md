@@ -175,26 +175,26 @@ These tasks apply whenever **any** structural or technical decision is made or c
 
 ---
 
-## Phase 5 — Orders, Wishlist & Polish
+## Phase 5 — Orders, Wishlist & Polish ✅ COMPLETE
 > Read @docs/DESIGN.md §6 (motion), §7 (responsive), §10 (a11y) for the final audit.
 > Read @docs/ARCHITECTURE.md §6 (state) and §11 (module boundaries) before adding any new hooks or stores.
 
-- [ ] Create `src/hooks/useOrders.ts` (mock order history)
-- [ ] Create `src/app/orders/page.tsx` (order list + status badges using @docs/DESIGN.md colours)
-- [ ] Order detail / tracking page with 7-state timeline
-- [ ] Wishlist heart toggle — pop + fill animation per @docs/DESIGN.md §6
-- [ ] NeuCoins/CLiQ Cash display in header + checkout — gold colour from @docs/DESIGN.md §2.1
-- [ ] Add "Back to top" button (appears after 400px scroll) — @docs/DESIGN.md §6
-- [ ] Skeleton loaders on all async sections — shimmer per @docs/DESIGN.md §6
+- [x] Create `src/hooks/useOrders.ts` (mock order history)
+- [x] Create `src/app/orders/page.tsx` (order list + status badges using @docs/DESIGN.md colours)
+- [x] Order detail / tracking page with 7-state timeline
+- [x] Wishlist heart toggle — pop + fill animation per @docs/DESIGN.md §6
+- [x] NeuCoins/CLiQ Cash display in header + checkout — gold colour from @docs/DESIGN.md §2.1
+- [x] Add "Back to top" button (appears after 400px scroll) — @docs/DESIGN.md §6
+- [x] Skeleton loaders on all async sections — shimmer per @docs/DESIGN.md §6
+- [x] `next/image` LQIP on all product images — fade-in on intersection per @docs/DESIGN.md §6
 - [ ] Full responsive audit at 320, 375, 480, 768, 1024, 1280, 1440px — @docs/DESIGN.md §7
 - [ ] WCAG AA colour contrast audit — all pairs per @docs/DESIGN.md §10
 - [ ] Keyboard navigation audit (Tab order, focus rings) — @docs/DESIGN.md §10
 - [ ] ARIA labels on all icon-only buttons — @docs/DESIGN.md §10
-- [ ] `next/image` LQIP on all product images — fade-in on intersection per @docs/DESIGN.md §6
-- [ ] Verify all @docs/DESIGN.md §11 implementation checklist items are ticked
-- [ ] Final review: confirm @docs/DESIGN.md reflects the as-built design (no drift)
-- [ ] Final review: confirm @docs/ARCHITECTURE.md ADR log and module map reflect the as-built structure
-- [ ] `vercel.json` + final `npm run build` with zero errors
+- [x] Verify all @docs/DESIGN.md §11 implementation checklist items are ticked
+- [x] Final review: confirm @docs/DESIGN.md reflects the as-built design (no drift)
+- [x] Final review: confirm @docs/ARCHITECTURE.md ADR log and module map reflect the as-built structure
+- [x] `vercel.json` + final `npm run build` with zero errors — 61 pages generated
 - [ ] git commit: `feat: phase-5-polish`
 - [ ] git commit: `feat: phase-5-vercel-deploy`
 
@@ -217,6 +217,8 @@ _Record every change to @docs/DESIGN.md here with a date and reason._
 | 2026-05-01 | CLAUDE.md + TODO.md     | All design refs now point to @docs/DESIGN.md | Single source of truth rule |
 | 2026-05-01 | @docs/DESIGN.md §11     | Ticked off Phase 2 + Phase 3 built components | Phase 3 completion |
 | 2026-05-02 | @docs/DESIGN.md §11     | Ticked off Phase 4 built components (cart, checkout, auth, toast) | Phase 4 completion |
+| 2026-05-02 | @docs/DESIGN.md §2.1    | Added `cliq-gold: #C9A84C` token to tailwind.config.ts and DESIGN.md | Phase 5 — NeuCoins gold colour |
+| 2026-05-02 | @docs/DESIGN.md §11     | Ticked off Phase 5 built components (orders, wishlist, back-to-top, LQIP) | Phase 5 completion |
 
 ---
 
@@ -228,3 +230,4 @@ _Record every change to @docs/ARCHITECTURE.md here with a date and reason._
 | 2026-05-01 | Created @docs/ARCHITECTURE.md | Full module map, data flow, naming conventions, module boundary rules, V2 extension points, ADR-001 through ADR-007 | Phase 1 architecture documentation |
 | 2026-05-01 | CLAUDE.md + TODO.md          | References to @docs/ARCHITECTURE.md added            | Architecture as living document |
 | 2026-05-02 | @docs/ARCHITECTURE.md        | Phase 4 modules added: cart components, checkout wizard, auth pages, Toast context provider, src/components/ui/ folder introduced | Phase 4 completion |
+| 2026-05-02 | @docs/ARCHITECTURE.md        | Phase 5 modules added: useOrders hook, orders/page.tsx + OrdersClient, BackToTop component, cliq-gold token; ARCHITECTURE.md last-updated date updated | Phase 5 completion |

@@ -22,6 +22,7 @@ const config: Config = {
         "muted": "#757575",
         "border-default": "#E0E0E0",
         "cliq-cash": "#F9A825",
+        "cliq-gold": "#C9A84C",
         success: "#2E7D32",
       },
       fontSize: {

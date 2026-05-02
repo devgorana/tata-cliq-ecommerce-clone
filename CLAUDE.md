@@ -175,14 +175,14 @@ src/
 | 2     | Layout & Homepage                     | ✅ COMPLETE   |
 | 3     | Product Catalog & Discovery (PLP/PDP) | ✅ COMPLETE   |
 | 4     | Cart, Checkout & Auth                 | ✅ COMPLETE   |
-| 5     | Orders, Wishlist & Polish             | ⬜ PENDING    |
+| 5     | Orders, Wishlist & Polish             | ✅ COMPLETE   |
 
 **Before starting any phase**: read @docs/DESIGN.md in full.
 **After any phase introduces a new design pattern**: update @docs/DESIGN.md before committing.
 
 ---
 
-## Current Phase: Phase 5 — Orders, Wishlist & Polish ⬜
+## Current Phase: Phase 5 — Orders, Wishlist & Polish ✅ COMPLETE
 
 ### Progress Log
 - [2026-05-01] Phase 1 complete: CLAUDE.md, TODO.md authored; Next.js 14 scaffolded; design tokens
@@ -221,3 +221,12 @@ src/
   (items, price breakdown, address, payment method); checkout/page.tsx (3-step wizard:
   address → payment → confirmation with order number). ToastProvider wired into root
   layout. Build: zero errors, 60 pages generated.
+- [2026-05-02] Phase 5 complete: useOrders hook (5 mock orders across all statuses, V2-ready
+  swap point); orders/page.tsx + OrdersClient (order list, 7-state timeline, status badges,
+  NeuCoins earned display, guest/empty states); BackToTop button (appears after 400px scroll,
+  smooth scroll, fade+slide animation, wired into root layout); wishlist heart pop+fill
+  animation in ProductCard (scale 1→1.3→1, 300ms per DESIGN.md §6); NeuCoins/CLiQ Cash
+  balance in Header (gold coin icon, shown when authenticated); next/image LQIP blur
+  placeholder on ProductCard and OrderCard images; cliq-gold token added to tailwind.config.ts
+  and DESIGN.md §2.1; vercel.json created (bom1 region, security headers, asset caching).
+  Build: zero errors, 61 pages generated.

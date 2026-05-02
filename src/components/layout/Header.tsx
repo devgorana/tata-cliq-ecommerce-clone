@@ -10,6 +10,7 @@ import {
   X,
   Menu,
   ChevronDown,
+  Coins,
 } from "lucide-react";
 import { useCartStore } from "@/store/useCartStore";
 import { useAuthStore } from "@/store/useAuthStore";
@@ -46,6 +47,7 @@ export default function Header() {
     (s) => s.items.reduce((sum, i) => sum + i.quantity, 0)
   );
   const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
+  const cliqCashBalance = useAuthStore((s) => s.user?.cliqCashBalance ?? 0);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -230,6 +232,23 @@ export default function Header() {
                   {isAuthenticated ? "ACCOUNT" : "LOGIN"}
                 </span>
               </Link>
+
+              {/* NeuCoins balance — shown when authenticated per @docs/DESIGN.md §8.3 */}
+              {isAuthenticated && cliqCashBalance > 0 && (
+                <Link
+                  href="/orders"
+                  className={cn(
+                    "hidden lg:flex flex-col items-center p-2 min-w-[52px] min-h-[44px] justify-center",
+                    "text-cliq-gold hover:opacity-80 transition-opacity"
+                  )}
+                  aria-label={`${cliqCashBalance} NeuCoins balance`}
+                >
+                  <Coins className="w-5 h-5" />
+                  <span className="text-[10px] font-semibold mt-0.5 whitespace-nowrap">
+                    {cliqCashBalance}
+                  </span>
+                </Link>
+              )}
             </div>
           </div>
         </div>
