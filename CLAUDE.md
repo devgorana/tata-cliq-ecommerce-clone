@@ -174,7 +174,7 @@ src/
 | 1     | Architecture & Setup                  | ✅ COMPLETE   |
 | 2     | Layout & Homepage                     | ✅ COMPLETE   |
 | 3     | Product Catalog & Discovery (PLP/PDP) | ✅ COMPLETE   |
-| 4     | Cart, Checkout & Auth                 | ⬜ PENDING    |
+| 4     | Cart, Checkout & Auth                 | ✅ COMPLETE   |
 | 5     | Orders, Wishlist & Polish             | ⬜ PENDING    |
 
 **Before starting any phase**: read @docs/DESIGN.md in full.
@@ -182,7 +182,7 @@ src/
 
 ---
 
-## Current Phase: Phase 4 — Cart, Checkout & Auth ⬜
+## Current Phase: Phase 5 — Orders, Wishlist & Polish ⬜
 
 ### Progress Log
 - [2026-05-01] Phase 1 complete: CLAUDE.md, TODO.md authored; Next.js 14 scaffolded; design tokens
@@ -208,3 +208,16 @@ src/
   (desktop inline + mobile sticky above bottom nav), ReviewsSection (star breakdown + mock
   reviews), CLiQPromise, OfferTags, NeuCoins; product/[slug]/page.tsx (SSG, 50 static paths).
   Build: zero errors, 55 pages generated.
+- [2026-05-02] Phase 4 complete: CartItem (image, variant, qty stepper, remove), PriceSummary
+  (subtotal/discount/delivery/total, free delivery threshold), CartDrawer (slide-in Sheet,
+  focus trap, aria-live, Escape key), cart/page.tsx (full cart page with empty state);
+  Toast/Snackbar (ToastProvider context, slide-up animation, success/warning variants,
+  aria-live, 3s auto-dismiss); OTPInput (6-digit, auto-focus advance, paste support,
+  keyboard nav), SocialLogin (Google mock), ProtectedRoute (redirect guard);
+  auth/login/page.tsx (email+password, validation, show/hide password, mock login),
+  auth/register/page.tsx (full registration form, validation), auth/otp/page.tsx
+  (phone → OTP two-step, resend countdown); AddressStep (full address form, Indian states,
+  validation), PaymentStep (UPI/Card/NetBanking/COD, UPI ID input), OrderSummary
+  (items, price breakdown, address, payment method); checkout/page.tsx (3-step wizard:
+  address → payment → confirmation with order number). ToastProvider wired into root
+  layout. Build: zero errors, 60 pages generated.

@@ -613,9 +613,9 @@ Use this to track component build status:
 - [x] Footer (4-column + bottom bar)
 - [x] PLP (filters + sort + grid)
 - [x] PDP (image gallery + info panel + trust badges)
-- [ ] Cart drawer / page
+- [x] Cart drawer / page
 - [ ] Wishlist page
-- [ ] Toast / snackbar notifications
+- [x] Toast / snackbar notifications
 - [x] Skeleton loaders
 - [ ] Responsive behavior at all 3 breakpoints
 - [ ] Accessibility audit (contrast, keyboard, ARIA)

@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import BottomNav from "@/components/layout/BottomNav";
+import { ToastProvider } from "@/components/ui/Toast";
 
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
@@ -33,10 +34,12 @@ export default function RootLayout({
       <body
         className={`${playfairDisplay.variable} ${dmSans.variable} font-body bg-surface text-primary-text antialiased`}
       >
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        <BottomNav />
+        <ToastProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+          <BottomNav />
+        </ToastProvider>
       </body>
     </html>
   );
